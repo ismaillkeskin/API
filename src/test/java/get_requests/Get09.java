@@ -36,6 +36,7 @@ public class Get09 extends HerokuAppBaseUrl {
 
         //Set the URL
         spec.pathParams("first", "booking", "second", 472);
+
         // Set the expected data
         Map<String, String> bookingdatesData = new HashMap<>();
         bookingdatesData.put("checkin", "2018-01-01");
@@ -49,9 +50,11 @@ public class Get09 extends HerokuAppBaseUrl {
         expectedData.put("bookingdates", bookingdatesData);
         expectedData.put("additionalneeds", "Extra pillows please");
         System.out.println("Expected Data: " + expectedData);
+
         // Send the request and get the response
         Response response = given(spec).when().get("{first}/{second}");
         response.prettyPrint();
+
         // Do assertion
         Map<String, Object> actualData = response.as(HashMap.class);
         assertEquals(expectedData.get("firstname"), actualData.get("firstname"));
@@ -62,8 +65,8 @@ public class Get09 extends HerokuAppBaseUrl {
         assertEquals(bookingdatesData.get("checkin"), ((Map)actualData.get("bookingdates")).get("checkin"));
         assertEquals(bookingdatesData.get("checkout"),((Map)actualData.get("bookingdates")).get("checkout"));
 
-//        Object obj = new HashMap<>();
-//        ((Map)obj).get("asdas");
+           // Object obj = new HashMap<>();
+           // ((Map)obj).get("asdas");
 
 
     }

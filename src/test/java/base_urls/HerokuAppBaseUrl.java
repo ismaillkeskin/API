@@ -10,12 +10,14 @@ public class HerokuAppBaseUrl {
 
     @Before
     public void Setup(){
+
         spec = new RequestSpecBuilder().setBaseUri("https://restful-booker.herokuapp.com").build();
     }
 }
   // Her sorguda tekrar eden dataları buraya gireceğiz
   /*
-API Testlerinde Base URL Kullanımı ve Faydaları
+     API Testlerinde Base URL Kullanımı ve Faydaları:
+
     Bir API testini yazarken, sıklıkla aynı temel URL'yi (Base URL) kullanmamız gerekebilir.
     Base URL, API servisimize ulaşmak için kullanılan temel adresi temsil eder.
     Bu durumda, aynı Base URL'yi her test metodu içinde tekrar tekrar belirtmek yerine, kodunuzun daha düzenli,
