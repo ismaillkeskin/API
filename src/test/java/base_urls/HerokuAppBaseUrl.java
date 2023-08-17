@@ -11,7 +11,10 @@ public class HerokuAppBaseUrl {
     @Before
     public void Setup(){
 
-        spec = new RequestSpecBuilder().setBaseUri("https://restful-booker.herokuapp.com").build();
+        spec = new RequestSpecBuilder()
+                .setBaseUri("https://restful-booker.herokuapp.com")
+                .setContentType(ContentType.JSON)
+                .build();
     }
 }
   // Her sorguda tekrar eden dataları buraya gireceğiz
