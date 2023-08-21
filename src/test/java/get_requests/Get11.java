@@ -9,6 +9,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
 public class Get11 extends HerokuAppBaseUrl {
+
 /*
      Given
          https://restful-booker.herokuapp.com/booking/535
