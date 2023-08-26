@@ -47,7 +47,7 @@ public class C01_CreateBooking extends HerokuAppBaseUrl {
             }
      */
 
-    public static int id;
+    public static int bookingId;
 
     @Test
     public void createBooking() {
@@ -61,7 +61,7 @@ public class C01_CreateBooking extends HerokuAppBaseUrl {
         // Send the request and get the response
         Response response = given(spec).body(expectedData).when().post("{first}");
         response.prettyPrint();
-        id = response.jsonPath().getInt("bookingid");
+        bookingId = response.jsonPath().getInt("bookingid");
 
         // Do assertion
         BookingResponsePojo actualData = convertJsonToJava(response.asString(), BookingResponsePojo.class);

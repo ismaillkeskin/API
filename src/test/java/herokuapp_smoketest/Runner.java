@@ -1,4 +1,4 @@
-package runner;
+package herokuapp_smoketest;
 
 import herokuapp_smoketest.C01_CreateBooking;
 import herokuapp_smoketest.C02_GetBookingById;
@@ -11,7 +11,10 @@ import org.junit.runners.Suite;
         {
                 C01_CreateBooking.class,
                 C02_GetBookingById.class,
-                C03_UpdateBooking.class
+                C03_UpdateBooking.class,
+                C04_PartialUpdateBooking.class,
+                C05_DeleteBooking.class,
+                C06_GetBookingById_NegativeTest.class
         }
 )
 
